@@ -41,26 +41,26 @@ Follow these steps to get the Expenses Tracker project up and running:
 
 If you're using npm, run:
 
-    ```bash
-        npm install
-    ```
+```shell
+    npm install
+```
 
 If you're using yarn, run:
 
-    ```bash
-        yarn install
-    ```
+```shell
+    yarn install
+```
 
 4. **Start the Development Server**: Launch the development server to see the project in your browser. Run the following command:
 
-    ```bash
-        npm start
-    ```
+```shell
+    npm start
+```
 Or:
     
-    ```bash
-        yarn install
-    ```
+```shell
+    yarn start
+```
 
 
 5. **Open in Browser**: Once the development server is up and running, open your web browser and navigate to `http://localhost:3000` to see the Expenses Tracker in action.
