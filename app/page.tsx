@@ -1,6 +1,7 @@
-import ExpencesItem from "@/components/ExpencesItem"
+import { CardItem } from "@/components/CardItem";
+import ExpensesItem from "@/components/ExpensesItem"
 
-export type expenceItemProps = {
+export type expenseItemProps = {
   id?: string;
   title: string;
   amount: number;
@@ -29,14 +30,13 @@ const expenses = [
 ];
 export default function IndexPage() {
   return (
-    <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <div>
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl"> Lets get started!</h1>
-      </div>
+    <section className="container flex w-full items-center justify-center gap-6 md:max-w-4xl md:py-10">
+    <CardItem className="flex w-full max-w-sm flex-wrap gap-6 bg-[#003459] p-8 dark:bg-[#FCE38A] md:max-w-4xl">
       {expenses.map((expense) => (
-        <ExpencesItem key={expense.id} date={expense.date} amount={expense.amount} title={expense.title} />
+        <ExpensesItem key={expense.id} date={expense.date} amount={expense.amount} title={expense.title} />
       ))}
-
-    </section>
+    </CardItem>
+  </section>
+  
   )
 }

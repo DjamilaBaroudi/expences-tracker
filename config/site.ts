@@ -12,6 +12,6 @@ export const siteConfig = {
   ],
   links: {
     twitter: "",
-    github: "https://github.com/DjamilaBaroudi",
+    github: "https://github.com/DjamilaBaroudi/expenses-tracker",
   },
 }
