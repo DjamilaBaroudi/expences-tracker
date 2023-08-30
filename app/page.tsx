@@ -1,5 +1,6 @@
 import { CardItem } from "@/components/CardItem";
 import ExpensesItem from "@/components/ExpensesItem"
+import NewExpenseItem from "@/components/NewExpenseItem";
 
 export type expenseItemProps = {
   id?: string;
@@ -30,13 +31,14 @@ const expenses = [
 ];
 export default function IndexPage() {
   return (
-    <section className="container flex w-full items-center justify-center gap-6 md:max-w-4xl md:py-10">
-    <CardItem className="flex w-full max-w-sm flex-wrap gap-6 bg-[#003459] p-8 dark:bg-[#FCE38A] md:max-w-4xl">
-      {expenses.map((expense) => (
-        <ExpensesItem key={expense.id} date={expense.date} amount={expense.amount} title={expense.title} />
-      ))}
-    </CardItem>
-  </section>
-  
+    <section className="container flex w-full flex-col items-center justify-center gap-6 md:max-w-4xl md:py-10">
+      <NewExpenseItem />
+      <CardItem className="flex w-full max-w-sm flex-wrap gap-6 bg-[#003459] p-8 dark:bg-[#FCE38A] md:max-w-4xl">
+        {expenses.map((expense) => (
+          <ExpensesItem key={expense.id} date={expense.date} amount={expense.amount} title={expense.title} />
+        ))}
+      </CardItem>
+    </section>
+
   )
 }
